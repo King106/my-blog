@@ -2,9 +2,13 @@
   "name": "my-blog",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://King106.github.io/my-blog/",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "export": "next export",
+    "deploy": "next build && next export",
+    "deploy:gh-pages": "pnpm build && pnpm export && gh-pages -d out",
     "start": "next start",
     "lint": "eslint"
   },
@@ -22,6 +26,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.2.10",
+    "gh-pages": "^5.0.0",
     "tailwindcss": "^4",
     "typescript": "^5"
   }
